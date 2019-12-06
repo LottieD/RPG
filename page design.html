@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--style-->
+		<style>
+			/*font*/
+			.fnt {
+				font-family: monospace;
+				font-size: 15px;
+			}
+			/*might be redundant*/
+			p.normal {
+				font-family: monospace;
+			}
+			/*buttons*/
+			.btn {
+					border: none;
+					background-color: inherit;
+					padding: 10px 10px;
+					font-size: 16px;
+					cursor: pointer;
+					display: inline-block;
+				}
+						/*shop items*/
+						.shop:hover {
+							background: e7e7e7
+						}
+			/*divider style*/
+			.ider {
+				border: groove;
+			}
+				
+				.enemy {
+					background: 55CDFC
+				}
+				.character {
+					background: F7A8B8
+				}
+				.shop {
+					background: white
+				}
+		</style>
+	<!--scripts-->
+	<script type="text/javascript" src="../js/exampleScript.js"></script> 
+	<script type="text/javascript" src="../js/fight.js"></script>
+</head>
+<body class="fnt">
+	<!--Enemy-->
+	<div class="ider enemy">
+		<h3>Enemy Health <span id="enemy-health"></span></h3>
+	</div>
+	<br></br>
+	<!--Player Character-->
+	<div class="ider character">
+			<h3>Player Health <span id="player-health"></span></h3>
+			<script type="text/javascript"></script>
+			<button class="btn" id="attack-button" onclick="attack()">Attack</button>
+	</div>
+
+	<br></br>
+	<!--Shop-->
+	<br></br>
+		<div class="ider shop">
+		<h2>Upgrade Shop</h2>
+		<h4>1 EXP</h4>
+			<button class="btn shop" onclick="heal()">1 - Healing Fountains</button>
+				<p>(Heal HP)</p>
+			<button class="btn shop">2 - Healing Fountains Upgrade</button>
+				<p>(+5 healing when using healing fountains)</p>
+			<button class="btn shop">3 - STR Up</button>
+				<p>(+1 attack)</p>
+			<button class="btn shop">4 - SPD Up</button>
+				<p>(+1 speed)</p>
+			<button class="btn shop">5 - Reflect</button>
+				<p>(Return enemy damage when rolling 1, 6, 11, etc., upgrade increases to x2, x3, etc. (still take damage, and reflect damage replaces normal damage unless it is lower))</p>
+			<button class="btn shop">6 - Dodge</button>
+				<p>(Avoid attacks which do 2 damage, upgrade dodges 4, 6, etc.)</p>
+		<br></br>
+		<h4>2 EXP</h4>
+			<button class="btn shop">7 - HP Up</button>
+				<p>(+5 max HP)</p>
+			<button class="btn shop">8 - Critical Hits </button>
+				<p>(x2 damage when rolling a multiple of 5, upgrade increases to x3, x4, etc.)</p>
+			<button class="btn shop">9 - Healing Spells</button>
+				<p>(Heals when rolling a multiple of 5 equal to roll, upgrade increases to x2, x3, etc. (mutually exclusive from critical hits, still does damage))</p>
+			<button class="btn shop">10 - Prepared Strikes</button>
+				<p>(x2 damage when rolling with full HP, upgrade increases to 3x, 4x, etc.)</p>
+			<button class="btn shop">11 - Danger Flight</button>
+				<p>(2x damage when rolling with 9 or less HP, upgrade increases to 3x, 4x, etc.)</p>
+		<h4>4 EXP</h4>
+			<button class="btn shop">12 - Anti-Reflect Hits</button>
+				<p>(Ignore one level of opponent reflect, upgrade increases to 2 levels, 3, etc.)</p>
+			<button class="btn shop">13 - Accuracy</button>
+				<p>(Ignore one level of opponent dodge, upgrade increases to 2 levels, 3, etc.)</p>
+			<button class="btn shop">14 - Critical Armor</button>
+				<p>(Ignore one level of opponent critical hits, upgrade increases to 2 levels, 3, etc.></p>
+			<button class="btn shop">15 - First Hits</button>
+				<p>(If faster, roll twice on first turn, no upgrade)</p>							
+	</div>
+</body>
+</html>
